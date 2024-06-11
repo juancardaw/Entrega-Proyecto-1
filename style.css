@@ -1,3 +1,5 @@
+/* Ajustes Generales */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *{
@@ -20,29 +22,89 @@ body {
     background-color: var(--background-color-body);
 }
 
-header > .navegador1 {
-    border: 2px solid red;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+ul {
+    list-style: none;
+}
 
+a {
+    text-decoration: none;
+}
+
+
+/* Header */
+
+header {
+    padding: 0 30px;
+    background-color: var(--background-color);
+}
+
+header a {
+    color: var(--secundary-color);
+}
+
+
+/* Header NAV1 */
+
+header > .navegador1 {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 20px
 }
 
 header > section > div > .foto_cabecera {
-    width: 230px;
+    width: 150px;
     height: 100%;
     object-fit: center;
 }
 
 header > section > div > .buscador {
-    width: 500px;
+    width: 900px;
     height: 40px;
     border-radius: 20px;
     padding: 0 20px;
 }
 
+header > section > div.iconos {
+    display: flex;
+    gap: 20px;
+}
+
 header > section > div.iconos > img {
-    width: 35px;
+    width: 30px;
     height: 100%;
     object-fit: center;
+}
+
+/* Header NAV2 */
+
+header > .navegador2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+}
+
+header > .navegador2 > div.todo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header > section.navegador2 > div > img.lista {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+header > section.navegador2 > nav.lista1_header > ul {
+    display: flex;
+    justify-content: space-around;
+    gap: var(--spacing);
+}
+
+header > section.navegador2 > nav.lista2_header > ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing);
 }
