@@ -15,7 +15,7 @@
     --background-color: #26282a;
     --background-color-body:#f2f2f2;
     --color-border-box:#ec008c;
-    --spacing:25px;
+    --spacing: 25px;
 }
 
 body {
@@ -58,6 +58,7 @@ header > section > div > .foto_cabecera {
     width: 150px;
     height: 100%;
     object-fit: center;
+    object-position: center;
 }
 
 header > section > div.busqueda {
@@ -86,16 +87,19 @@ header > section > div.busqueda > img {
     object-fit: cover;
 }
 
-header > section > div.iconos {
-    display: flex;
-    gap: 20px;
+header > section > div.iconos > a {
+    margin: 10px;
 }
 
-header > section > div.iconos > img {
+
+header > section > div.iconos > a > img {
     width: 30px;
     height: 100%;
     object-fit: center;
+    object-position: center;
+    
 }
+
 
 /* Header NAV2 */
 
@@ -124,6 +128,7 @@ header > section.navegador2 > div > img.lista {
     object-fit: cover;
 }
 
+
 /* Nav 2 List 1 */
 
 header > section.navegador2 > nav.lista1_header > ul {
@@ -132,6 +137,7 @@ header > section.navegador2 > nav.lista1_header > ul {
     flex-wrap: wrap;
     gap: var(--spacing);
 }
+
 
 /* Nav 2 List 2 */
 
