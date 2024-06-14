@@ -12,10 +12,13 @@
 :root {
     --primary-color:black;
     --secundary-color:white;
+    --third-color:#00e4c0;
     --background-color: #26282a;
     --background-color-body:#f2f2f2;
     --color-border-box:#ec008c;
     --spacing: 25px;
+    --spacing-menor: 15px;
+    --spacing-major: 50px;
 }
 
 body {
@@ -34,8 +37,9 @@ a {
 /* Header */
 
 header {
-    padding: 0 30px;
     background-color: var(--background-color);
+    position: sticky;
+    top: 0;
 }
 
 header a {
@@ -46,12 +50,12 @@ header a {
 /* Header NAV1 */
 
 header > .navegador1 {
-    display: flex;
-    justify-content:space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
-    gap: var(--spacing);
-    padding: 20px;
-    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    height: 80px;
 }
 
 header > section > div > .foto_cabecera {
@@ -62,8 +66,7 @@ header > section > div > .foto_cabecera {
 }
 
 header > section > div.busqueda {
-    width: 900px;
-    height: 45px;
+    width: auto;
     display: flex;
     align-items: center;
     gap: var(--spacing);
@@ -73,7 +76,8 @@ header > section > div.busqueda {
 }
 
 header > section > div.busqueda > input {
-    width: 900px;
+    width: 700px;
+    min-width: 100px;
     height: 45px;
     border-radius:20px;
     background-color: var(--background-color-body);
@@ -87,44 +91,43 @@ header > section > div.busqueda > img {
     object-fit: cover;
 }
 
-header > section > div.iconos > a {
-    margin: 10px;
+header > section > div.iconos {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
 }
 
-
 header > section > div.iconos > a > img {
-    width: 30px;
+    width: 25px;
     height: 100%;
     object-fit: center;
-    object-position: center;
-    
 }
 
 
 /* Header NAV2 */
 
 header > .navegador2 {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     align-items: center;
-    flex-wrap: wrap;
-    gap: var(--spacing);
-    height: 50px;
+    justify-content: center;
+    gap: 50px;
+    min-height: 50px;
 }
 
-header > .navegador2 > div.todo {
+header > .navegador2 > div.todo_nav2 {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: var(--spacing)
 }
 
-header > .navegador2 > div.todo > p {
+header > .navegador2 > div.todo_nav2 > p {
     color: var(--secundary-color);
 }
 
 header > section.navegador2 > div > img.lista {
     width: 25px;
-    height: 25px;
     object-fit: cover;
 }
 
@@ -133,7 +136,8 @@ header > section.navegador2 > div > img.lista {
 
 header > section.navegador2 > nav.lista1_header > ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing);
 }
@@ -144,10 +148,150 @@ header > section.navegador2 > nav.lista1_header > ul {
 header > section.navegador2 > nav.lista2_header > ul {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing);
 }
 
 
 /* Main */
+
+main > section > a.anuncio_principal {
+    display: flex;
+    justify-content: center;
+}
+
+main > section > a > img.foto_principal {
+    max-width: 100%;
+}
+
+main > .h2_principal {
+    display:flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+main > section.galeria_productos {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 30% 1fr;
+    gap: 80px;
+    width: 87%;
+    margin: 40px 0;
+    
+}
+
+main > section > div.boton_ofertas {
+    display: grid;
+    justify-content: end;
+    align-items: start;
+    grid-template-rows: repeat(2, 20px);
+    gap: 30px;
+    font-size: 17px;
+}
+
+main > section > div.boton_ofertas > button {
+    max-width: 200px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px solid var(--third-color);
+    font-size: 15px;
+}
+
+
+main > section > section.lista_productos {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 20px;
+}
+
+main > section > section.lista_productos > div.producto {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 100%;
+    background-color: var(--secundary-color) ; 
+    border-radius: 5px;   
+}
+
+main > section > section.lista_productos > div.producto:hover {
+    box-shadow: 0 0 2px 2px var(--background-color);
+}
+
+main > section > section.lista_productos > div.producto > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-menor);
+}
+
+main > section > section.lista_productos > div.producto > a > p {
+    font-size: 15px;
+    color: var(--primary-color);
+}
+
+main > section > section.lista_productos > div.producto > a > p > span {
+    font-size: 30px;
+}
+
+
+/* Main, seccion secundaria */
+
+main > section.seccion_secundaria {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: var(--spacing-major);
+    margin: 2% 12%;
+    gap: var(--spacing-major);
+    background-color: var(--secundary-color) ;
+    border-top: solid 10px var(--color-border-box);
+    font-size:20px;
+}
+
+main > section.seccion_secundaria > section.productos_secundarios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+    flex-wrap: wrap;
+}
+
+
+/* Main destacados */
+
+main > section.destacados {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-major);
+    background-color: var(--secundary-color);
+    margin: 2% 12%;
+    padding: 50px;
+}
+
+main > section.destacados > section.productos_destacados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-major);
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+main > section.destacados > section.productos_destacados > a {
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
 
