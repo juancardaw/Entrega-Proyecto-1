@@ -324,9 +324,12 @@ footer {
 footer > section.nav_footer{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 100px;
+}
+
+footer > section.nav_footer > div.generales {
+    width: 250px;
 }
 
 footer > section.nav_footer > div.generales > p {
