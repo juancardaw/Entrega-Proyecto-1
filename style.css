@@ -171,6 +171,8 @@ main > .h2_principal {
     margin: 40px 0;
 }
 
+/* Main seccion primaria */
+
 main > section.galeria_productos {
     display: grid;
     justify-content: center;
@@ -289,6 +291,65 @@ main > section.destacados > section.productos_destacados > a {
     justify-content: center;
     align-items: center;
 }
+
+main > section.destacados > section.productos_destacados > div.destacado > a > img.imagen_destacado {
+    transition: 0.4s ;
+}
+
+main > section.destacados > section.productos_destacados > div.destacado > a > img.imagen_destacado:hover {
+    transform: scale(1.1);
+}
+
+/* footer */
+
+footer {
+    /* border: red solid 2px; */
+    display:grid;
+    grid-template-columns: repeat(2, minmax(auto, auto));
+    gap: var(--spacing-major);
+    padding: var(--spacing-menor);
+    background-color: var(--background-color);
+    color: white;
+}
+
+/* footer seccion condiciones */
+
+footer > section.nav_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+footer > section.nav_footer > div.generales > p {
+    padding: 10px 0;
+}
+
+footer > section.nav_footer > div.generales > ul > a > li{
+    color: rgb(183, 179, 179);
+    padding: 2px 0;
+    font-size: 15px;
+}
+
+/* footer redes sociales */
+
+footer > section.red_social_footer > p {
+    padding: 10px 0;
+}
+
+
+footer > section.red_social_footer > div.redes_sociales > a > img {
+    width: 40px;
+    object-fit: cover;
+    object-position: center;;
+}
+
+
+
+
+
+
 
 
 
