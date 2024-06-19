@@ -192,12 +192,19 @@ main > section > div.boton_ofertas {
     font-size: 17px;
 }
 
-main > section > div.boton_ofertas > button {
+main > section > div.boton_ofertas > a {
     max-width: 200px;
     height: 50px;
     border-radius: 20px;
     border: 2px solid var(--third-color);
     font-size: 15px;
+    text-align: center;
+    padding: 12px;
+    color: var(--background-color);
+}
+
+main > section > div.boton_ofertas > a:hover {
+    background-color: rgb(183, 179, 179);
 }
 
 
@@ -307,7 +314,7 @@ footer {
     display:grid;
     grid-template-columns: repeat(2, minmax(auto, auto));
     gap: var(--spacing-major);
-    padding: var(--spacing-menor);
+    padding: var(--spacing-major);
     background-color: var(--background-color);
     color: white;
 }
@@ -332,6 +339,11 @@ footer > section.nav_footer > div.generales > ul > a > li{
     font-size: 15px;
 }
 
+footer > section.nav_footer > div.generales > ul > a > li:hover {
+    color: var(--background-color-body);
+    text-decoration: underline;
+}
+
 /* footer redes sociales */
 
 footer > section.red_social_footer > p {
@@ -342,7 +354,7 @@ footer > section.red_social_footer > p {
 footer > section.red_social_footer > div.redes_sociales > a > img {
     width: 40px;
     object-fit: cover;
-    object-position: center;;
+    object-position: center;
 }
 
 
