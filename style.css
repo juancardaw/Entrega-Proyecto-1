@@ -142,6 +142,10 @@ header > section.navegador2 > nav.lista1_header > ul {
     gap: var(--spacing);
 }
 
+header >section.navegador2 > nav.lista1_header > ul > li > a:hover {
+    text-decoration: underline;
+}
+
 
 /* Nav 2 List 2 */
 
@@ -297,6 +301,11 @@ main > section.destacados > section.productos_destacados > a {
     justify-items: center;
     justify-content: center;
     align-items: center;
+}
+
+main > section.destacados > section.productos_destacados > div.destacado > a > p {
+    color: var(--background-color);
+    font-size: 18px;
 }
 
 main > section.destacados > section.productos_destacados > div.destacado > a > img.imagen_destacado {
