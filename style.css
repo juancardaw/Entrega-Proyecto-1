@@ -421,11 +421,33 @@ footer > section.red_social_footer > div.redes_sociales > a > img {
     }
 
 
+
     /* Boton ofertas destacadas */
 
     main > section.galeria_productos > div.boton_ofertas > a {
         display: none;
     } 
+
+    /* Titulo principal de la pagina */
+
+    main > h2.h2_principal {
+        padding: 0 var(--spacing-menor);
+    }
+
+    /* Listado de productos primarios */
+
+    main > section.galeria_productos {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 0 var(--spacing-menor);
+    }
+
+    main > section.galeria_productos > section.lista_productos > div.producto {
+        justify-content: center;
+        align-content: cneter;
+    }
 
 
     /* footer */
